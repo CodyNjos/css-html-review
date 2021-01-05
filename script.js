@@ -10,11 +10,7 @@ function readyNow() {
     $('footer').on('dblclick', backgroundFlip);
     $('footer').on('click', backgroundReset)
 }
-
-
-
 let person = []
-
 
 function whiteHighlight() {
     $(this).css('border-color', 'white');
@@ -40,7 +36,7 @@ function backgroundFlip() {
     $('div').css('border-color', '#c4cc8c');
     $('footer').css('border-color', '#c4cc8c');
     $('footer').css('background-color', '#c4cc8c');
-    console.log('test')
+    console.log('Flip');
 }
 function backgroundReset() {
     $('body').css('background-color', '#c4cc8c');
@@ -48,6 +44,7 @@ function backgroundReset() {
     $('div').css('border-color', 'blanchedalmond');
     $('footer').css('border-color', 'blanchedalmond');
     $('footer').css('background-color', 'blanchedalmond');
+    console.log('Reset Flip');
 }
 function submit(firstName, middleName, lastName) {
     let list = $('#list')
@@ -62,8 +59,6 @@ function submit(firstName, middleName, lastName) {
     console.log(person);
     return true;
 }
-
-
 function submit2() {
     let firstName2 = $('#firstName').val();
     let middleName2 = $('#middleName').val();
