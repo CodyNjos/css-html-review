@@ -5,6 +5,10 @@ function readyNow() {
     $( 'input' ).mouseleave( noHighlight);
     $( '#submitPerson').on( 'click' , submit2);
     $( 'h3').on( 'click' , displayColor);
+    $( 'ul' ).on('contextmenu' , textBlack);
+    $( 'ul' ).on('click' , textRed);
+    $( 'footer' ).on('dblclick' , backgroundFlip);
+    $( 'footer' ).on('click' , backgroundReset)
 }
 
 
@@ -16,26 +20,45 @@ function whiteHighlight() {
     $( this ).css('border-color' , 'white');
 }
 function noHighlight() {
-    $( this ).css('border-color' , '')
+    $( this ).css('border-color' , '');
 }
 function displayColor() {
     
     let color = $( this ).css( "background-color" );
     console.log(color);
-    $("#colorPost").html('' + color)
+    $("#colorPost").html('' + color);
     }
+function textRed() {
+    $( this ).css('color' , 'red');
+}
+function textBlack() {
+    $( this ).css('color' , 'black');
+}
+function backgroundFlip(){
+    $( 'body' ).css('background-color' , 'blanchedalmond');
+    $( 'h1' ).css('border-color' , '#c4cc8c');
+    $( 'div' ).css('border-color' , '#c4cc8c');
+    $( 'footer' ).css('border-color' , '#c4cc8c');
+    $( 'footer' ).css('background-color' , '#c4cc8c');
+    console.log('test')
+}
+function backgroundReset() {
+    $( 'body' ).css('background-color' , '#c4cc8c');
+    $( 'h1' ).css('border-color' , 'blanchedalmond');
+    $( 'div' ).css('border-color' , 'blanchedalmond');
+    $( 'footer' ).css('border-color' , 'blanchedalmond');
+    $( 'footer' ).css('background-color' , 'blanchedalmond');
+}
 function submit(firstName, middleName , lastName) {
-   
+    let list = $('#list')
     const personSubmit = {
         first : firstName,
         middle : middleName ,
         last : lastName,
     }
-    if( firstName === '' && lastName === ''){
-        alert ('Please Enter, At Minimun, A First And Last Name')
-        return false;
-    }
+    
     person.push(personSubmit);
+    list.append( '<li>' + firstName + ' ' + middleName + ' ' + lastName + '</li>');
     console.log(person);
     return true;
 }
@@ -45,12 +68,16 @@ function submit2() {
     let firstName2 = $( '#firstName' ).val();
     let middleName2 = $( '#middleName' ).val();
     let lastName2 = $( '#lastName' ).val();
-    let list = $('#list')
-   
+    
+    if( firstName2 === '' && lastName2=== ''){
+        alert ('Please Enter, At Minimun, A First And Last Name')
+        return false;
+    }
     submit(firstName2 , middleName2 , lastName2)
-    list.append( '<li>' + firstName2 + ' ' + middleName2 + ' ' + lastName2 + '</li>');
+    
     $( '#firstName' ).val('');
     $( '#middleName' ).val('');
     $( '#lastName').val('');
 }
+
 

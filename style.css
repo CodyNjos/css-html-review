@@ -15,7 +15,7 @@ h3{
 }
 body{
     background-color:#c4cc8c;
-    padding: 30px;
+    padding: 10px 30px 10px 30px;
     
 }
 #person{
@@ -53,6 +53,25 @@ input{
 .colors{
     border:solid 10px blanchedalmond;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px 0px 10px 0px;
     text-align: center;
+}
+footer{
+    border: solid 10px blanchedalmond;
+    background-color: blanchedalmond;
+    border-radius: 50px;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+button{
+    border:outset;
+}
+button:focus{
+   outline:none;
+   border:inset
+}
+input:focus{
+    outline: none;
 }
