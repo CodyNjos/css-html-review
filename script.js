@@ -4,7 +4,7 @@ function readyNow() {
     $( 'input' ).mouseenter( whiteHighlight );
     $( 'input' ).mouseleave( noHighlight);
     $( '#submitPerson').on( 'click' , submit2);
-
+    $( 'h3').on( 'click' , displayColor);
 }
 
 
@@ -18,12 +18,22 @@ function whiteHighlight() {
 function noHighlight() {
     $( this ).css('border-color' , '')
 }
+function displayColor() {
+    
+    let color = $( this ).css( "background-color" );
+    console.log(color);
+    $("#colorPost").html('' + color)
+    }
 function submit(firstName, middleName , lastName) {
    
     const personSubmit = {
         first : firstName,
         middle : middleName ,
         last : lastName,
+    }
+    if( firstName === '' && lastName === ''){
+        alert ('Please Enter, At Minimun, A First And Last Name')
+        return false;
     }
     person.push(personSubmit);
     console.log(person);
@@ -43,3 +53,4 @@ function submit2() {
     $( '#middleName' ).val('');
     $( '#lastName').val('');
 }
+

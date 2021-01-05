@@ -7,11 +7,16 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     
 }
+p{
+    text-align: center;
+}
 h3{
     text-align: center;
 }
 body{
     background-color:#c4cc8c;
+    padding: 30px;
+    
 }
 #person{
     padding: 20px;
@@ -23,4 +28,31 @@ body{
 }
 input{
     margin: 5px;
+}
+.red{
+    
+    background-color: red;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+.green{
+    
+    background-color: #44ff6d;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+.blue{
+    
+    background-color: rgb(75,50,255);
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+.colors{
+    border:solid 10px blanchedalmond;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
