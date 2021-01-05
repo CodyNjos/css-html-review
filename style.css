@@ -50,6 +50,12 @@ input{
     width: 60px;
     margin: 10px;
 }
+.purple{
+    background-color: rgba(135, 37, 226, 0.445);
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
 .colors{
     border:solid 10px blanchedalmond;
     padding: 10px;
