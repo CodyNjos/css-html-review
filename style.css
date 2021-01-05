@@ -1,3 +1,26 @@
 h1{
-    color: red
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    border: double 40px blanchedalmond;
+    border-radius: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+h3{
+    text-align: center;
+}
+body{
+    background-color:#c4cc8c;
+}
+#person{
+    padding: 20px;
+    text-align: center;
+}
+.info{
+    border: solid 10px blanchedalmond;
+    padding: 30px;
+}
+input{
+    margin: 5px;
 }
